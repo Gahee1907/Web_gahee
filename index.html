@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+    <div class="main">
+        <div class="slider-for">
+            <div>
+                <h3>Welcome "Lee.GaHee"</h3>
+            </div>
+            <div OnClick="location.href ='Algorithm.html'" style="cursor:pointer;"><h3>Algorithm</h3></div>
+          <div><h3>Profile</h3></div>
+          <div OnClick="location.href ='portfolio.html'" style="cursor:pointer;"><h3>Portfolio</h3></div>
+        </div>
+        <div class="slider-nav">
+            <div><h4>Welcome</h4></div>
+            <div OnClick="location.href ='Algorithm.html'" style="cursor:pointer;"><h4>Algorithm</h4></div>
+            <div><h4>Profile</h4></div>
+            <div OnClick="location.href ='portfolio.html'" style="cursor:pointer;"><h4>Portfolio</h4></div>
+        </div>
+      </div>
+    <script>
+        $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        intifite: true,
+        asNavFor: '.slider-nav',
+        autoplay: true,
+        speed: 2000
+        });
+        $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        focusOnSelect: true,
+        });
+
+        $('a[data-slide]').click(function(e) {
+        e.preventDefault();
+        var slideno = $(this).data('slide');
+        $('.slider-nav').slick('slickGoTo', slideno - 1);
+        });
+    </script>
+
+    <section>
+        <div class="title">
+            <img src="img/별.PNG">
+        </div>
+    </section>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+</body>
