@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1065번 한수</title>
+        <link rel="stylesheet" type="text/css" href="피보나치수.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <div><input class="upbtn" type="button" value="Top" onclick="clickme()"></div>
+    <script>
+      function clickme() {
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+      }
+    </script>
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section style="background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/math.jpg);">
+        <div class="background">
+            <h1>한수</h1>
+        </div> 
+    </section>
+
+    <div class="container">
+        <div class="title">
+            <a href="math.html"><img src="img/back.png"></a><h2>1065번 한수</h2>
+            <h4>#수학 #브루트포스 알고리즘</h4>
+        </div>
+   
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1"><img src="img/python-logo.png"><br>Python</li>
+          <li class="tab-link" data-tab="tab-2"><img src="img/java-logo-1.png"><br>Java</li>
+          <li class="tab-link" data-tab="tab-3"><img src="img/javascript-logo.png" style="border-radius: 5px;"><br>JavaScript</li>
+          <li class="tab-link" data-tab="tab-4"><img src="img/dart-logo.png"><br>Dart</li>
+        </ul>
+       
+        <div id="tab-1" class="tab-content current">
+            <script src="https://gist.github.com/Gahee1907/313460a6ef167a1c15a1753fff1fb7a1.js"></script>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/b4ff615e8bf85dbaad8fb913fb80459f.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/25e73a831f858e4156862bfa9e96ecc9.js"></script>
+         </div>
+
+         <div id="tab-4" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/e69dfcfb84c6aecefa8eaf967791e68a.js"></script>
+         </div>
+
+         <div class="link">
+            <a href="https://www.acmicpc.net/problem/1065" target="_blank">출처: https://www.acmicpc.net/problem/1065</a>
+        </div>
+
+        <div class="about">
+            등차수열은 연속된 두 개의 수의 차이가 일정한 수열이다.<br>
+            N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 문제이다.<br>
+            <br>각 자리수의 차이값이 같은 경우가 한수이다.<br>
+            두 자리수 이하는 등차수열인지 판단할 수 없기 때문에 한수로 간주한다.
+
+        </div>
+       
+      </div>
+
+      <script>
+        $(document).ready(function(){
+   
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+        
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+        
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+        
+        })
+      </script>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>

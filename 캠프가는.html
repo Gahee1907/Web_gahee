@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1590번 캠프가는 영식</title>
+        <link rel="stylesheet" type="text/css" href="피보나치수.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <div><input class="upbtn" type="button" value="Top" onclick="clickme()"></div>
+    <script>
+      function clickme() {
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+      }
+    </script>
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section style="background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/math.jpg);">
+        <div class="background">
+            <h1>캠프가는 영식</h1>
+        </div> 
+    </section>
+
+    <div class="container">
+        <div class="title">
+            <a href="math.html"><img src="img/back.png"></a><h2>1590번 캠프가는 영식</h2>
+            <h4>#수학 #브루트포스 알고리즘 #이분 탐색</h4>
+        </div>
+
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1"><img src="img/python-logo.png"><br>Python</li>
+          <li class="tab-link" data-tab="tab-2"><img src="img/java-logo-1.png"><br>Java</li>
+          <li class="tab-link" data-tab="tab-3"><img src="img/javascript-logo.png" style="border-radius: 5px;"><br>JavaScript</li>
+          <li class="tab-link" data-tab="tab-4"><img src="img/dart-logo.png"><br>Dart</li>
+        </ul>
+       
+        <div id="tab-1" class="tab-content current">
+            <script src="https://gist.github.com/Gahee1907/4b2b430a21a638d6b3931ce00932b6ee.js"></script>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/dde82cc54e5513eab8fb607c0755f3c4.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/46f6e3e45bac7fddb1ae98d4f4903f50.js"></script>
+         </div>
+
+         <div id="tab-4" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/a3b1c583bb697db8aa28cbd4eae31871.js"></script>
+         </div>
+       
+         <div class="link">
+            <a href="https://www.acmicpc.net/problem/1590" target="_blank">출처: https://www.acmicpc.net/problem/1590</a>
+        </div>
+
+        <div class="about">
+            어떤 버스의 시작 시각이 특점 시점을 기준으로 10분 후이고, 간격은 10분이고, 대수가 5대이면,<br>
+             이 버스는 10분, 20분, 30분, 40분, 50분에 한 대씩 출발한다.<br>
+             <br>영식이가 도착했을 때,<br>
+              첫 차가 출발하지 않았으면 첫 차를 타고<br>
+              출발하지 않은 시간대의 차가 있으면 가장 빨리 오는 차를 타고<br>
+              마지막 버스까지 놓쳤다면 차를 탈 수 없다. ('-1' 출력)
+
+        </div>
+
+      </div>
+
+      <script>
+        $(document).ready(function(){
+   
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+        
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+        
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+        
+        })
+      </script>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>
