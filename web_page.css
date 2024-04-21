@@ -1,0 +1,158 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+@media screen and (max-width: 1000px) {}
+body {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {display: none;}
+
+
+ul {list-style-type: none;}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+
+header {
+    width: 100%; 
+    background-color: rgb(34, 33, 33);
+}
+header .inner {
+    width: 1000px; height: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+header .inner .name { 
+    position: absolute;
+    bottom: 5px;
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+}
+header .inner .menu {
+    height: 50px;
+    padding: 10px;
+    position: absolute; 
+    right: 0; top: 9px;
+}
+header .inner .menu ul li {
+    float: left;
+}
+header .inner .menu ul li a {
+    padding: 10px 30px;
+    font-size: 16px;
+    transition: all 0.5s;
+    color: white;
+}  
+header .inner .menu ul li a:hover {
+    background-color: rgb(72, 71, 71); 
+    color: white;
+}
+header .inner .menu ul li:hover .dropmenu {
+    display: block;
+}
+header .inner .menu ul li .dropmenu {
+    display: none; position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+header .inner .menu ul li .dropmenu a {
+    display: block;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+header .inner .menu ul li .dropmenu a:hover {
+    background-color: black; color:white;
+}
+
+section {width: 100%;}
+section .top {
+    width: 100%;height: 96px;
+    color: white;
+    background-image: url(img/별.PNG);
+}
+section .container {
+    width: 1200px;
+    margin: 10px auto 50px;
+}
+section .container .title {
+    width: 1000px;
+    height: 80px;
+    margin: 20px auto;
+    border-bottom: 2px solid black;
+}
+section .container .title img {
+    width: 40px; height: 40px;
+}
+section .container .title h1 {
+    display: inline;
+    margin-left: 20px;
+    font-size: 30px;
+}
+section .container .title p {
+    margin: 5px 60px;
+}
+h1,img {
+    vertical-align: middle;
+}
+section .container .detail {
+    width: 1000px; 
+    margin: 0 auto;
+}
+section .container .detail img{
+    width: 1000px; height: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px lightgray;
+    cursor: pointer;
+}
+
+section .container .detail .button {
+    width: 220px; height: 42px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 19px;
+    box-shadow: 2.7px 2.7px 1px black;
+    margin: 40px auto; padding: 6px;
+
+}
+section .container .detail article {
+    margin: 40px 0;
+}
+section .container .detail  article h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+section .container .detail article p {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 3px;
+    line-height: 26px;
+}
+section .container .detail article p span {color: red; font-size: 14px;}
+
+
+
+footer {
+    width: 100%; 
+    background-color: rgb(240, 239, 239);
+    padding-bottom: 20px;
+}
+footer .bottom {
+    width: 1000px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+}
+footer .bottom h1 {
+    position:absolute;
+    top: 40px;
+    color: rgb(118, 116, 116);
+}
+footer .bottom ul {
+    position: absolute;
+    bottom: 10px;
+    color: rgb(118, 116, 116);
+    font-size: 15px;
+}

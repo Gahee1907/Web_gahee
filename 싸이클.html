@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2526번 싸이클</title>
+        <link rel="stylesheet" type="text/css" href="피보나치수.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <div><input class="upbtn" type="button" value="Top" onclick="clickme()"></div>
+    <script>
+      function clickme() {
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+      }
+    </script>
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section style="background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/im.jpg);">
+        <div class="background">
+            <h1>싸이클</h1>
+        </div> 
+    </section>
+
+    <div class="container">
+        <div class="title">
+            <a href="imple.html"><img src="img/back.png"></a><h2>2526번 싸이클</h2>
+            <h4>#구현</h4>
+        </div>
+   
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1"><img src="img/python-logo.png"><br>Python</li>
+          <li class="tab-link" data-tab="tab-2"><img src="img/java-logo-1.png"><br>Java</li>
+          <li class="tab-link" data-tab="tab-3"><img src="img/javascript-logo.png" style="border-radius: 5px;"><br>JavaScript</li>
+          <li class="tab-link" data-tab="tab-4"><img src="img/dart-logo.png"><br>Dart</li>
+        </ul>
+       
+        <div id="tab-1" class="tab-content current">
+            <script src="https://gist.github.com/Gahee1907/0b990e53913fe8979efb8fe04ea1dcc0.js"></script>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/d69a8376f19babafc9c84567f833d751.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/a6302ebbdde44d380ee51367a81092b9.js"></script>
+         </div>
+
+         <div id="tab-4" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/3f861c90f3d4e0df4b970e12feb21a60.js"></script>
+         </div>
+
+         <div class="link">
+            <a href="https://www.acmicpc.net/problem/2526" target="_blank">출처: https://www.acmicpc.net/problem/2526</a>
+        </div>
+
+        <div class="about">
+            N = 67, P = 31인 경우, 처음 출력되는 수는 <strong >67</strong>이고,<br>
+            두 번째로 출력되는 수는 67×67 = 4489를 31로 나눈 나머지 <strong >25</strong>이다.<br>
+            다음에는 25×67 = 1675를 31로 나눈 나머지 <strong>1</strong>,
+            다음에는 1×67 = 67을 31로 나눈 나머지<strong>5</strong> 가 차례대로 출력된다.<br>
+            다음에는 5×67 = 335를 31로 나눈 나머지 <strong>25</strong>가 출력된다.<br>
+            <img src="img/사이클.PNG"><br>
+            num으로 계산된 값을 arr에 없으면 추가하고, 같은 수가 나오면 break한다. <br>
+            이 과정으로 반복되는 수들의 개수를 구할 수 있다.
+        </div>
+
+      </div>
+
+      <script>
+        $(document).ready(function(){
+   
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+        
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+        
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+        
+        })
+      </script>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>

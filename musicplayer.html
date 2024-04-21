@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title>Portfolio_Music Player</title>
+        <link rel="stylesheet" type="text/css" href="web_page.css">
+    </head>
+</html>
+<body>
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section>
+        <div class="top">ㅇ</div>
+        <div class="container">
+            <div class="title">
+                <a href="portfolio.html"><img src="img/back.png"></a><h1>MUSIC PLAYER</h1>
+                <p>Music Player를 통해 음악을 재생시킬 수 있어요.</p>
+            </div>
+
+            
+            <div class="detail">
+                <img src="img/ex_3.PNG" OnClick="location.href ='https://gahee1907.github.io/ex_3/'">
+                <div class="button"><a href="https://gahee1907.github.io/ex_3/" target="_blank">VIEW</a></div>
+
+                <article>
+                    <p>8개의 음악 파일을 재생시킬 수 있는 Music Player 페이지를 구성했습니다.<br><br></p>
+                    <h2>[작업기능]</h2>
+                    <p>▶ heaad에 웹 폰트 아이콘을 사용하기 위해 연결 구문 삽입<br><br>
+
+                        ▶ article 패널 자바스크립트로 360° 회전<br>
+                           (frame에 section요소 담고, article 8개를 변수 lists에 저장한 뒤
+                            for of문을 통해 deg=45°,<br> 변수에 초깃값 0을 설정해 rotate<span>회전</span>
+                            회전방향 기준으로 세로로 -100vh만큼 위쪽에 배치 <strong>translateY</strong>에 값 할당<br>
+                            이미지와 그림자 이미지에 키프레임 2개 정의해 가상요소::before와 ::after에 무한 회전하도록 aimation설정)<br><br>
+
+                        ▶ 음악제목과 컨트롤 버튼 생성<br>
+                        (for of문 안에 <strong>pause버튼</strong><span>일시정지</span> <strong>play버튼</strong><span>재생</span><strong>load버튼</strong><span>처음부터 재생</span>을
+                          각 변수에 저장후 클릭 이벤트 연결,<br> 오디오파일 play()함수와 load()함수 호출해 재생)<br><Br>
+                        
+                        ▶ 좌우버튼 클릭으로 패널 회전<br>
+                        (btnPrev<span>이전버튼</span> 45°, 90°,...로 45°씩 증가하며 프레임 오른쪽으로 회전,<br>
+                         btnNext<span>다음버튼</span> -45°, -90°,...로 -45°씩 감소하며 프레임 왼쪽으로 회전)
+                    </p>
+                </article>
+                <article>
+                    <h2>[작업 페이지]</h2>
+                    <p>index 1페이지</p>   
+                </article>
+                <article>
+                    <h2>[사용 툴]</h2>
+                    <p>HTML, CSS, Javascript, VS Code</p>   
+                </article>
+             </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+</body>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10833번 사과</title>
+        <link rel="stylesheet" type="text/css" href="피보나치수.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <div><input class="upbtn" type="button" value="Top" onclick="clickme()"></div>
+    <script>
+      function clickme() {
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+      }
+    </script>
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section style="background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/math.jpg);">
+        <div class="background">
+            <h1>사과</h1>
+        </div> 
+    </section>
+
+    <div class="container">
+        <div class="title">
+            <a href="math.html"><img src="img/back.png"></a><h2>10833번 사과</h2>
+            <h4>#수학 #사칙연산</h4>
+        </div>
+
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1"><img src="img/python-logo.png"><br>Python</li>
+          <li class="tab-link" data-tab="tab-2"><img src="img/java-logo-1.png"><br>Java</li>
+          <li class="tab-link" data-tab="tab-3"><img src="img/javascript-logo.png" style="border-radius: 5px;"><br>JavaScript</li>
+          <li class="tab-link" data-tab="tab-4"><img src="img/dart-logo.png"><br>Dart</li>
+        </ul>
+       
+        <div id="tab-1" class="tab-content current">
+            <script src="https://gist.github.com/Gahee1907/28ee72e03acb2ff370771509a4abc53a.js"></script>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/b27184be2834cf8ed90044e879b86da1.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/68003c9c0e649a77f02e0474a472c35b.js"></script>
+         </div>
+
+         <div id="tab-4" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/dc2aa29ebf3a8f09ff135f7b6c6d6478.js"></script>
+         </div>
+
+         <div class="link">
+            <a href="https://www.acmicpc.net/problem/10833" target="_blank">출처: https://www.acmicpc.net/problem/10833</a>
+        </div>
+
+        <div class="about">
+            <img src="img/사과.PNG"><br>
+            각각의 학교에서 학생들에게 사과를 나눠 준 후, 최소의 사과만 남게한 후 그 합을 구하는 문제이다.<br>
+            사과를 나눠주고 난 후 0이 되는 값은 더하지 않아도 되기때문에 나머지가 0이 아닐 때, <br>
+            b 나누기 a의 나머지값을 sum에 더해준다.
+        </div>
+       
+      </div>
+
+      <script>
+        $(document).ready(function(){
+   
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+        
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+        
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+        
+        })
+      </script>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>

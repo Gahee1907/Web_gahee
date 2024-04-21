@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1193번 분수찾기</title>
+        <link rel="stylesheet" type="text/css" href="피보나치수.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+</html>
+<body>
+    <div><input class="upbtn" type="button" value="Top" onclick="clickme()"></div>
+    <script>
+      function clickme() {
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+      }
+    </script>
+    
+    <header>
+        <div class="inner">
+            <p class="name" onclick="location.href='index.html'" style="cursor: pointer;">Lee.GaHee</p>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="algorithm.html">Algorithm</a>
+                        <div class="dropmenu">
+                            <a href="imple.html">Implementation</a>
+                            <a href="math.html">Mathematics</a>
+                            <a href="dynamic.html">Dynamic.P</a>
+                            <a href="graph.html">Graph</a>
+                        </div>
+
+                    </li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+
+    <section style="background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(img/im.jpg);">
+        <div class="background">
+            <h1>분수찾기</h1>
+        </div> 
+    </section>
+
+    <div class="container">
+        <div class="title">
+            <a href="imple.html"><img src="img/back.png"></a><h2>1193번 분수찾기</h2>
+            <h4>#구현 #수학</h4>
+        </div>
+   
+        <ul class="tabs">
+          <li class="tab-link current" data-tab="tab-1"><img src="img/python-logo.png"><br>Python</li>
+          <li class="tab-link" data-tab="tab-2"><img src="img/java-logo-1.png"><br>Java</li>
+          <li class="tab-link" data-tab="tab-3"><img src="img/javascript-logo.png" style="border-radius: 5px;"><br>JavaScript</li>
+          <li class="tab-link" data-tab="tab-4"><img src="img/dart-logo.png"><br>Dart</li>
+        </ul>
+       
+        <div id="tab-1" class="tab-content current">
+            <script src="https://gist.github.com/Gahee1907/79e7f58101d503bc8c8ff1090f32940a.js"></script>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/0f997b125c6b132f5d5140a983c81cda.js"></script>
+        </div>
+        
+        <div id="tab-3" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/f1e8d5fd512dec3c2c29ec7ddc4c318c.js"></script>
+         </div>
+
+         <div id="tab-4" class="tab-content">
+            <script src="https://gist.github.com/Gahee1907/6ec327197c244f9e4741776bdc65b2d9.js"></script>
+         </div>
+       
+         <div class="link">
+            <a href="https://www.acmicpc.net/problem/1193" target="_blank">출처: https://www.acmicpc.net/problem/1193</a>
+        </div>
+
+        <div class="about">
+            <img src="img/분수.PNG"><br>
+            단계가 홀수이면 분자값이 감소하고, 짝수이면 분자값이 증가한다.<br>
+
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function(){
+   
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+        
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+        
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+        
+        })
+      </script>
+
+    <footer>
+        <div class="bottom">
+            <h1>Lee.GaHee</h1>
+            <ul>
+                <li>Manseok-ro 159beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</li>
+                <li>Tel: 010-3901-9410</li>
+                <li>E-mail: rkgml10079@gmail.com</li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>
